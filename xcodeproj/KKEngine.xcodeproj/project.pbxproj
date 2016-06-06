@@ -1,0 +1,1531 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		50180D381B50CB1300388C47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50180D371B50CB1300388C47 /* Images.xcassets */; };
+		50180D471B50CB1300388C47 /* KKEngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50180D461B50CB1300388C47 /* KKEngineTests.m */; };
+		50265F101C45FEA600B952E0 /* KKEntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F0E1C45FEA600B952E0 /* KKEntityManager.cpp */; };
+		50265F111C45FEA600B952E0 /* KKEntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F0E1C45FEA600B952E0 /* KKEntityManager.cpp */; };
+		50265F191C466BDD00B952E0 /* KKSceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F171C466BDD00B952E0 /* KKSceneManager.cpp */; };
+		50265F1A1C466BDD00B952E0 /* KKSceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F171C466BDD00B952E0 /* KKSceneManager.cpp */; };
+		50265F211C47D78900B952E0 /* KKStringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F1F1C47D78900B952E0 /* KKStringUtil.cpp */; };
+		50265F221C47D78900B952E0 /* KKStringUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F1F1C47D78900B952E0 /* KKStringUtil.cpp */; };
+		50265F261C47D88E00B952E0 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F241C47D88E00B952E0 /* md5.cpp */; };
+		50265F271C47D88E00B952E0 /* md5.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F241C47D88E00B952E0 /* md5.cpp */; };
+		5029BE4F1C3E7A8000FD0847 /* KKTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5029BE4D1C3E7A8000FD0847 /* KKTimer.cpp */; };
+		5029BE501C3E7A8000FD0847 /* KKTimer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5029BE4D1C3E7A8000FD0847 /* KKTimer.cpp */; };
+		50356B3B1C43D92A0070021E /* KKGLStateCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50356B391C43D92A0070021E /* KKGLStateCache.cpp */; };
+		50356B3C1C43D92A0070021E /* KKGLStateCache.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50356B391C43D92A0070021E /* KKGLStateCache.cpp */; };
+		5037CEA41CD0B45800B27B8B /* KKTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5037CEA21CD0B45800B27B8B /* KKTexture.cpp */; };
+		5037CEA51CD0B45800B27B8B /* KKTexture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5037CEA21CD0B45800B27B8B /* KKTexture.cpp */; };
+		503E4D0F1C3FC1880035361D /* KKGLMatrixStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D0D1C3FC1880035361D /* KKGLMatrixStack.cpp */; };
+		503E4D101C3FC1880035361D /* KKGLMatrixStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D0D1C3FC1880035361D /* KKGLMatrixStack.cpp */; };
+		503E4D631C40FEAE0035361D /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D531C40FEAE0035361D /* aabb.c */; };
+		503E4D641C40FEAE0035361D /* aabb.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D531C40FEAE0035361D /* aabb.c */; };
+		503E4D651C40FEAE0035361D /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 503E4D541C40FEAE0035361D /* ChangeLog */; };
+		503E4D661C40FEAE0035361D /* ChangeLog in Resources */ = {isa = PBXBuildFile; fileRef = 503E4D541C40FEAE0035361D /* ChangeLog */; };
+		503E4D671C40FEAE0035361D /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 503E4D551C40FEAE0035361D /* CMakeLists.txt */; };
+		503E4D681C40FEAE0035361D /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 503E4D551C40FEAE0035361D /* CMakeLists.txt */; };
+		503E4D691C40FEAE0035361D /* mat4stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D571C40FEAE0035361D /* mat4stack.c */; };
+		503E4D6A1C40FEAE0035361D /* mat4stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D571C40FEAE0035361D /* mat4stack.c */; };
+		503E4D6B1C40FEAE0035361D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D581C40FEAE0035361D /* matrix.c */; };
+		503E4D6C1C40FEAE0035361D /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D581C40FEAE0035361D /* matrix.c */; };
+		503E4D6D1C40FEAE0035361D /* mat3.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D591C40FEAE0035361D /* mat3.c */; };
+		503E4D6E1C40FEAE0035361D /* mat3.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D591C40FEAE0035361D /* mat3.c */; };
+		503E4D6F1C40FEAE0035361D /* mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5A1C40FEAE0035361D /* mat4.c */; };
+		503E4D701C40FEAE0035361D /* mat4.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5A1C40FEAE0035361D /* mat4.c */; };
+		503E4D711C40FEAE0035361D /* neon_matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5B1C40FEAE0035361D /* neon_matrix_impl.c */; };
+		503E4D721C40FEAE0035361D /* neon_matrix_impl.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5B1C40FEAE0035361D /* neon_matrix_impl.c */; };
+		503E4D731C40FEAE0035361D /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5C1C40FEAE0035361D /* plane.c */; };
+		503E4D741C40FEAE0035361D /* plane.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5C1C40FEAE0035361D /* plane.c */; };
+		503E4D751C40FEAE0035361D /* quaternion.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5D1C40FEAE0035361D /* quaternion.c */; };
+		503E4D761C40FEAE0035361D /* quaternion.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5D1C40FEAE0035361D /* quaternion.c */; };
+		503E4D771C40FEAE0035361D /* ray2.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5E1C40FEAE0035361D /* ray2.c */; };
+		503E4D781C40FEAE0035361D /* ray2.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5E1C40FEAE0035361D /* ray2.c */; };
+		503E4D791C40FEAE0035361D /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5F1C40FEAE0035361D /* utility.c */; };
+		503E4D7A1C40FEAE0035361D /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D5F1C40FEAE0035361D /* utility.c */; };
+		503E4D7B1C40FEAE0035361D /* vec2.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D601C40FEAE0035361D /* vec2.c */; };
+		503E4D7C1C40FEAE0035361D /* vec2.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D601C40FEAE0035361D /* vec2.c */; };
+		503E4D7D1C40FEAE0035361D /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D611C40FEAE0035361D /* vec3.c */; };
+		503E4D7E1C40FEAE0035361D /* vec3.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D611C40FEAE0035361D /* vec3.c */; };
+		503E4D7F1C40FEAE0035361D /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D621C40FEAE0035361D /* vec4.c */; };
+		503E4D801C40FEAE0035361D /* vec4.c in Sources */ = {isa = PBXBuildFile; fileRef = 503E4D621C40FEAE0035361D /* vec4.c */; };
+		505B91591C3E582600B72AD7 /* KKApplication.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505B91441C3E582600B72AD7 /* KKApplication.cpp */; };
+		505B915B1C3E582600B72AD7 /* KKAutoreleasePool.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505B914A1C3E582600B72AD7 /* KKAutoreleasePool.cpp */; };
+		505B915C1C3E582600B72AD7 /* KKObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505B914C1C3E582600B72AD7 /* KKObject.cpp */; };
+		505B91691C3E5CF900B72AD7 /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 505B91681C3E5CF900B72AD7 /* main.mm */; };
+		505B916C1C3E5CF900B72AD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B916B1C3E5CF900B72AD7 /* AppDelegate.m */; };
+		505B916F1C3E5CF900B72AD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B916E1C3E5CF900B72AD7 /* ViewController.m */; };
+		505B91721C3E5CF900B72AD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 505B91701C3E5CF900B72AD7 /* Main.storyboard */; };
+		505B91741C3E5CF900B72AD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 505B91731C3E5CF900B72AD7 /* Images.xcassets */; };
+		505B91771C3E5CF900B72AD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 505B91751C3E5CF900B72AD7 /* LaunchScreen.xib */; };
+		505B91831C3E5CF900B72AD7 /* KKEngineIOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 505B91821C3E5CF900B72AD7 /* KKEngineIOSTests.m */; };
+		505D66B71C965DA4009B30FC /* KKDrawingPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505D66B51C965DA4009B30FC /* KKDrawingPrimitives.cpp */; };
+		505D66B81C965DA4009B30FC /* KKDrawingPrimitives.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505D66B51C965DA4009B30FC /* KKDrawingPrimitives.cpp */; };
+		505D66BB1C96609F009B30FC /* KKShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505D66B91C96609F009B30FC /* KKShaderProgram.cpp */; };
+		505D66BC1C96609F009B30FC /* KKShaderProgram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505D66B91C96609F009B30FC /* KKShaderProgram.cpp */; };
+		505D66BF1C969C89009B30FC /* KKResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505D66BD1C969C89009B30FC /* KKResourceManager.cpp */; };
+		505D66C01C969C89009B30FC /* KKResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505D66BD1C969C89009B30FC /* KKResourceManager.cpp */; };
+		505D66C31C96E5A6009B30FC /* KKFileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505D66C11C96E5A6009B30FC /* KKFileUtil.cpp */; };
+		505D66C41C96E5A6009B30FC /* KKFileUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505D66C11C96E5A6009B30FC /* KKFileUtil.cpp */; };
+		505D66C61C9904B7009B30FC /* KKApplication_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 505D66C51C9904B7009B30FC /* KKApplication_ios.mm */; };
+		505D66C81C9933B1009B30FC /* KKResourceManager_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 505D66C71C9933B1009B30FC /* KKResourceManager_mac.mm */; };
+		505D66CA1C9933EF009B30FC /* KKResourceManager_ios.mm in Sources */ = {isa = PBXBuildFile; fileRef = 505D66C91C9933EF009B30FC /* KKResourceManager_ios.mm */; };
+		506591B31CD0E80200B7FA12 /* HLImageETC1Codec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591A91CD0E80200B7FA12 /* HLImageETC1Codec.cpp */; };
+		506591B41CD0E80200B7FA12 /* HLImageETC1Codec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591A91CD0E80200B7FA12 /* HLImageETC1Codec.cpp */; };
+		506591B51CD0E80200B7FA12 /* HLImageJPEGCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591AB1CD0E80200B7FA12 /* HLImageJPEGCodec.cpp */; };
+		506591B61CD0E80200B7FA12 /* HLImageJPEGCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591AB1CD0E80200B7FA12 /* HLImageJPEGCodec.cpp */; };
+		506591B71CD0E80200B7FA12 /* HLImagePNGCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591AD1CD0E80200B7FA12 /* HLImagePNGCodec.cpp */; };
+		506591B81CD0E80200B7FA12 /* HLImagePNGCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591AD1CD0E80200B7FA12 /* HLImagePNGCodec.cpp */; };
+		506591B91CD0E80200B7FA12 /* HLImagePVRCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591AF1CD0E80200B7FA12 /* HLImagePVRCodec.cpp */; };
+		506591BA1CD0E80200B7FA12 /* HLImagePVRCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591AF1CD0E80200B7FA12 /* HLImagePVRCodec.cpp */; };
+		506591BB1CD0E80200B7FA12 /* HLImageWEBPCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591B11CD0E80200B7FA12 /* HLImageWEBPCodec.cpp */; };
+		506591BC1CD0E80200B7FA12 /* HLImageWEBPCodec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591B11CD0E80200B7FA12 /* HLImageWEBPCodec.cpp */; };
+		506591BF1CD0E93000B7FA12 /* KKGLConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591BD1CD0E93000B7FA12 /* KKGLConfiguration.cpp */; };
+		506591C01CD0E93000B7FA12 /* KKGLConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591BD1CD0E93000B7FA12 /* KKGLConfiguration.cpp */; };
+		507BEA5F1C44EF9B0015F936 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50180D391B50CB1300388C47 /* MainMenu.xib */; };
+		5085641B1C93F7610023C7F1 /* KKClippingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508564191C93F7610023C7F1 /* KKClippingComponent.cpp */; };
+		5085641C1C93F7610023C7F1 /* KKClippingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508564191C93F7610023C7F1 /* KKClippingComponent.cpp */; };
+		508F9A091CA13A4A00FCADFC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 508F9A081CA13A4A00FCADFC /* libz.tbd */; };
+		509C86EE1CE9B82D002E76B2 /* KKView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 509C86EC1CE9B82D002E76B2 /* KKView.cpp */; };
+		509C86EF1CE9B82D002E76B2 /* KKView.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 509C86EC1CE9B82D002E76B2 /* KKView.cpp */; };
+		50C69F001C4B937700A299BC /* KKTransform2DComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50C69EFE1C4B937700A299BC /* KKTransform2DComponent.cpp */; };
+		50C69F011C4B938000A299BC /* KKTransform2DComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50C69EFE1C4B937700A299BC /* KKTransform2DComponent.cpp */; };
+		50C69F041C4B93B700A299BC /* KKScissorComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50C69F021C4B93B700A299BC /* KKScissorComponent.cpp */; };
+		50C69F051C4B93B700A299BC /* KKScissorComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50C69F021C4B93B700A299BC /* KKScissorComponent.cpp */; };
+		50D0C7B61CE577A5004A8110 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D0C7B51CE577A5004A8110 /* tree.png */; };
+		50D0C7B71CE577A5004A8110 /* tree.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D0C7B51CE577A5004A8110 /* tree.png */; };
+		50D0C7BA1CE578F5004A8110 /* KKShaderComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50D0C7B81CE578F5004A8110 /* KKShaderComponent.cpp */; };
+		50D0C7BB1CE578F5004A8110 /* KKShaderComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50D0C7B81CE578F5004A8110 /* KKShaderComponent.cpp */; };
+		50D0C7BD1CE5B2AF004A8110 /* ChatBubbleGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D0C7BC1CE5B2AF004A8110 /* ChatBubbleGreen.png */; };
+		50D0C7BE1CE5B2AF004A8110 /* ChatBubbleGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 50D0C7BC1CE5B2AF004A8110 /* ChatBubbleGreen.png */; };
+		50E11D261CB7E4B600CA6D5F /* KKClassRegister.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50E11D241CB7E4B600CA6D5F /* KKClassRegister.cpp */; };
+		50E11D271CB7E4B600CA6D5F /* KKClassRegister.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50E11D241CB7E4B600CA6D5F /* KKClassRegister.cpp */; };
+		50F05D6C1B5913E3007DA5F7 /* AppDelegate.hpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F05D6B1B5913E3007DA5F7 /* AppDelegate.hpp */; };
+		50F05DCC1B5A11B7007DA5F7 /* Atomic in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D8D1B5A11B7007DA5F7 /* Atomic */; };
+		50F05DCD1B5A11B7007DA5F7 /* Barrier in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D8E1B5A11B7007DA5F7 /* Barrier */; };
+		50F05DCE1B5A11B7007DA5F7 /* Block in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D8F1B5A11B7007DA5F7 /* Block */; };
+		50F05DCF1B5A11B7007DA5F7 /* Condition in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D901B5A11B7007DA5F7 /* Condition */; };
+		50F05DD01B5A11B7007DA5F7 /* Config in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D911B5A11B7007DA5F7 /* Config */; };
+		50F05DD11B5A11B7007DA5F7 /* Exports in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D921B5A11B7007DA5F7 /* Exports */; };
+		50F05DD21B5A11B7007DA5F7 /* Mutex in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D931B5A11B7007DA5F7 /* Mutex */; };
+		50F05DD31B5A11B7007DA5F7 /* ReadWriteMutex in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D941B5A11B7007DA5F7 /* ReadWriteMutex */; };
+		50F05DD41B5A11B7007DA5F7 /* ReentrantMutex in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D951B5A11B7007DA5F7 /* ReentrantMutex */; };
+		50F05DD51B5A11B7007DA5F7 /* ScopedLock in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D961B5A11B7007DA5F7 /* ScopedLock */; };
+		50F05DD61B5A11B7007DA5F7 /* Thread in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D971B5A11B7007DA5F7 /* Thread */; };
+		50F05DD71B5A11B7007DA5F7 /* Version in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D981B5A11B7007DA5F7 /* Version */; };
+		50F05DD81B5A11B7007DA5F7 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D9A1B5A11B7007DA5F7 /* CMakeLists.txt */; };
+		50F05DD91B5A11B7007DA5F7 /* Atomic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F05D9C1B5A11B7007DA5F7 /* Atomic.cpp */; };
+		50F05DDA1B5A11B7007DA5F7 /* Config.in in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D9D1B5A11B7007DA5F7 /* Config.in */; };
+		50F05DDB1B5A11B7007DA5F7 /* Version.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F05D9E1B5A11B7007DA5F7 /* Version.cpp */; };
+		50F05DDC1B5A11B7007DA5F7 /* Version.in in Resources */ = {isa = PBXBuildFile; fileRef = 50F05D9F1B5A11B7007DA5F7 /* Version.in */; };
+		50F05DDD1B5A11B7007DA5F7 /* CMakeLists.txt in Resources */ = {isa = PBXBuildFile; fileRef = 50F05DA11B5A11B7007DA5F7 /* CMakeLists.txt */; };
+		50F05DDE1B5A11B7007DA5F7 /* PThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F05DA21B5A11B7007DA5F7 /* PThread.cpp */; };
+		50F05DDF1B5A11B7007DA5F7 /* PThreadBarrier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F05DA31B5A11B7007DA5F7 /* PThreadBarrier.cpp */; };
+		50F05DE01B5A11B7007DA5F7 /* PThreadCondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F05DA51B5A11B7007DA5F7 /* PThreadCondition.cpp */; };
+		50F05DE11B5A11B7007DA5F7 /* PThreadMutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F05DA71B5A11B7007DA5F7 /* PThreadMutex.cpp */; };
+		50F4FC931CD752F0005CF05A /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F4FC8F1CD752F0005CF05A /* button.png */; };
+		50F4FC941CD752F0005CF05A /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F4FC8F1CD752F0005CF05A /* button.png */; };
+		50F4FC971CD752F0005CF05A /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F4FC921CD752F0005CF05A /* grass.png */; };
+		50F4FC981CD752F0005CF05A /* grass.png in Resources */ = {isa = PBXBuildFile; fileRef = 50F4FC921CD752F0005CF05A /* grass.png */; };
+		50F4FC9B1CD8468E005CF05A /* KKSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F4FC991CD8468E005CF05A /* KKSpriteComponent.cpp */; };
+		50F4FC9C1CD8468E005CF05A /* KKSpriteComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F4FC991CD8468E005CF05A /* KKSpriteComponent.cpp */; };
+		50F4FCA11CD99CA2005CF05A /* KKColorAdvanceComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F4FC9F1CD99CA2005CF05A /* KKColorAdvanceComponent.cpp */; };
+		50F4FCA21CD99CA2005CF05A /* KKColorAdvanceComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F4FC9F1CD99CA2005CF05A /* KKColorAdvanceComponent.cpp */; };
+		50F4FCA51CD99CBF005CF05A /* KKColorComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F4FCA31CD99CBF005CF05A /* KKColorComponent.cpp */; };
+		50F4FCA61CD99CBF005CF05A /* KKColorComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F4FCA31CD99CBF005CF05A /* KKColorComponent.cpp */; };
+		50F6AC2B1C43DE7000BDF95C /* KKUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6AC291C43DE7000BDF95C /* KKUtil.cpp */; };
+		50F6AC2C1C43DE7000BDF95C /* KKUtil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50F6AC291C43DE7000BDF95C /* KKUtil.cpp */; };
+		50F6AC2D1C44A98800BDF95C /* KKDirector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 505B91471C3E582600B72AD7 /* KKDirector.cpp */; };
+		50F6AC2E1C44AB6800BDF95C /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50180D321B50CB1300388C47 /* main.mm */; };
+		50F6AC321C44ADD000BDF95C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 50180D351B50CB1300388C47 /* AppDelegate.mm */; };
+		50F6AC331C44ADDB00BDF95C /* KKApplication_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 505B91541C3E582600B72AD7 /* KKApplication_mac.mm */; };
+		50F6AC341C44ADDF00BDF95C /* KKDirectorCaller_mac.mm in Sources */ = {isa = PBXBuildFile; fileRef = 505B91561C3E582600B72AD7 /* KKDirectorCaller_mac.mm */; };
+		50F6AC351C44ADF400BDF95C /* KKGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 505B91581C3E582600B72AD7 /* KKGLView.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50180D411B50CB1300388C47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50180D251B50CB1300388C47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 50180D2C1B50CB1300388C47;
+			remoteInfo = KKEngine;
+		};
+		505B917D1C3E5CF900B72AD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50180D251B50CB1300388C47 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 505B91631C3E5CF900B72AD7;
+			remoteInfo = KKEngineIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		50180D2D1B50CB1300388C47 /* KKEngine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKEngine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		50180D311B50CB1300388C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50180D321B50CB1300388C47 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		50180D341B50CB1300388C47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		50180D351B50CB1300388C47 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		50180D371B50CB1300388C47 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		50180D3A1B50CB1300388C47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		50180D401B50CB1300388C47 /* KKEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		50180D451B50CB1300388C47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50180D461B50CB1300388C47 /* KKEngineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKEngineTests.m; sourceTree = "<group>"; };
+		50265F0E1C45FEA600B952E0 /* KKEntityManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKEntityManager.cpp; sourceTree = "<group>"; };
+		50265F0F1C45FEA600B952E0 /* KKEntityManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKEntityManager.hpp; sourceTree = "<group>"; };
+		50265F171C466BDD00B952E0 /* KKSceneManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKSceneManager.cpp; sourceTree = "<group>"; };
+		50265F181C466BDD00B952E0 /* KKSceneManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKSceneManager.hpp; sourceTree = "<group>"; };
+		50265F1F1C47D78900B952E0 /* KKStringUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKStringUtil.cpp; sourceTree = "<group>"; };
+		50265F201C47D78900B952E0 /* KKStringUtil.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKStringUtil.hpp; sourceTree = "<group>"; };
+		50265F241C47D88E00B952E0 /* md5.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = md5.cpp; sourceTree = "<group>"; };
+		50265F251C47D88E00B952E0 /* md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = md5.h; sourceTree = "<group>"; };
+		5029BE4D1C3E7A8000FD0847 /* KKTimer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKTimer.cpp; sourceTree = "<group>"; };
+		5029BE4E1C3E7A8000FD0847 /* KKTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKTimer.h; sourceTree = "<group>"; };
+		5029BE551C3E81DD00FD0847 /* KKDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDelegate.h; sourceTree = "<group>"; };
+		5029BE561C3E81DD00FD0847 /* KKDelegateImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKDelegateImpl.h; sourceTree = "<group>"; };
+		5029BE591C3FAD6000FD0847 /* KKGL.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKGL.h; sourceTree = "<group>"; };
+		50356B391C43D92A0070021E /* KKGLStateCache.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKGLStateCache.cpp; sourceTree = "<group>"; };
+		50356B3A1C43D92A0070021E /* KKGLStateCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKGLStateCache.h; sourceTree = "<group>"; };
+		5037CEA21CD0B45800B27B8B /* KKTexture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKTexture.cpp; sourceTree = "<group>"; };
+		5037CEA31CD0B45800B27B8B /* KKTexture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKTexture.hpp; sourceTree = "<group>"; };
+		503E4D0D1C3FC1880035361D /* KKGLMatrixStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKGLMatrixStack.cpp; sourceTree = "<group>"; };
+		503E4D0E1C3FC1880035361D /* KKGLMatrixStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKGLMatrixStack.h; sourceTree = "<group>"; };
+		503E4D431C40FEAE0035361D /* aabb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = aabb.h; sourceTree = "<group>"; };
+		503E4D451C40FEAE0035361D /* mat4stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat4stack.h; sourceTree = "<group>"; };
+		503E4D461C40FEAE0035361D /* matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		503E4D471C40FEAE0035361D /* kazmath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kazmath.h; sourceTree = "<group>"; };
+		503E4D481C40FEAE0035361D /* mat3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat3.h; sourceTree = "<group>"; };
+		503E4D491C40FEAE0035361D /* mat4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mat4.h; sourceTree = "<group>"; };
+		503E4D4A1C40FEAE0035361D /* neon_matrix_impl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = neon_matrix_impl.h; sourceTree = "<group>"; };
+		503E4D4B1C40FEAE0035361D /* plane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = plane.h; sourceTree = "<group>"; };
+		503E4D4C1C40FEAE0035361D /* quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = quaternion.h; sourceTree = "<group>"; };
+		503E4D4D1C40FEAE0035361D /* ray2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ray2.h; sourceTree = "<group>"; };
+		503E4D4E1C40FEAE0035361D /* utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utility.h; sourceTree = "<group>"; };
+		503E4D4F1C40FEAE0035361D /* vec2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec2.h; sourceTree = "<group>"; };
+		503E4D501C40FEAE0035361D /* vec3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec3.h; sourceTree = "<group>"; };
+		503E4D511C40FEAE0035361D /* vec4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vec4.h; sourceTree = "<group>"; };
+		503E4D531C40FEAE0035361D /* aabb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = aabb.c; sourceTree = "<group>"; };
+		503E4D541C40FEAE0035361D /* ChangeLog */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		503E4D551C40FEAE0035361D /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		503E4D571C40FEAE0035361D /* mat4stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mat4stack.c; sourceTree = "<group>"; };
+		503E4D581C40FEAE0035361D /* matrix.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
+		503E4D591C40FEAE0035361D /* mat3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mat3.c; sourceTree = "<group>"; };
+		503E4D5A1C40FEAE0035361D /* mat4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mat4.c; sourceTree = "<group>"; };
+		503E4D5B1C40FEAE0035361D /* neon_matrix_impl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = neon_matrix_impl.c; sourceTree = "<group>"; };
+		503E4D5C1C40FEAE0035361D /* plane.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = plane.c; sourceTree = "<group>"; };
+		503E4D5D1C40FEAE0035361D /* quaternion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = quaternion.c; sourceTree = "<group>"; };
+		503E4D5E1C40FEAE0035361D /* ray2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ray2.c; sourceTree = "<group>"; };
+		503E4D5F1C40FEAE0035361D /* utility.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = utility.c; sourceTree = "<group>"; };
+		503E4D601C40FEAE0035361D /* vec2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vec2.c; sourceTree = "<group>"; };
+		503E4D611C40FEAE0035361D /* vec3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vec3.c; sourceTree = "<group>"; };
+		503E4D621C40FEAE0035361D /* vec4.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = vec4.c; sourceTree = "<group>"; };
+		503E4D841C4109EA0035361D /* KKGeometry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKGeometry.h; sourceTree = "<group>"; };
+		505B91441C3E582600B72AD7 /* KKApplication.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKApplication.cpp; sourceTree = "<group>"; };
+		505B91451C3E582600B72AD7 /* KKApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKApplication.h; sourceTree = "<group>"; };
+		505B91461C3E582600B72AD7 /* KKApplicationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKApplicationProtocol.h; sourceTree = "<group>"; };
+		505B91471C3E582600B72AD7 /* KKDirector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKDirector.cpp; sourceTree = "<group>"; };
+		505B91481C3E582600B72AD7 /* KKDirector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKDirector.h; sourceTree = "<group>"; };
+		505B914A1C3E582600B72AD7 /* KKAutoreleasePool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKAutoreleasePool.cpp; sourceTree = "<group>"; };
+		505B914B1C3E582600B72AD7 /* KKAutoreleasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKAutoreleasePool.h; sourceTree = "<group>"; };
+		505B914C1C3E582600B72AD7 /* KKObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKObject.cpp; sourceTree = "<group>"; };
+		505B914D1C3E582600B72AD7 /* KKObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKObject.h; sourceTree = "<group>"; };
+		505B914F1C3E582600B72AD7 /* GameEngineConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameEngineConfig.h; sourceTree = "<group>"; };
+		505B91501C3E582600B72AD7 /* KKMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKMacros.h; sourceTree = "<group>"; };
+		505B91511C3E582600B72AD7 /* KKSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKSingleton.h; sourceTree = "<group>"; };
+		505B91541C3E582600B72AD7 /* KKApplication_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KKApplication_mac.mm; sourceTree = "<group>"; };
+		505B91551C3E582600B72AD7 /* KKDirectorCaller_mac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKDirectorCaller_mac.h; sourceTree = "<group>"; };
+		505B91561C3E582600B72AD7 /* KKDirectorCaller_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KKDirectorCaller_mac.mm; sourceTree = "<group>"; };
+		505B91571C3E582600B72AD7 /* KKGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKGLView.h; sourceTree = "<group>"; };
+		505B91581C3E582600B72AD7 /* KKGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KKGLView.mm; sourceTree = "<group>"; };
+		505B91641C3E5CF900B72AD7 /* KKEngineIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKEngineIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		505B91671C3E5CF900B72AD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		505B91681C3E5CF900B72AD7 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
+		505B916A1C3E5CF900B72AD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		505B916B1C3E5CF900B72AD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		505B916D1C3E5CF900B72AD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		505B916E1C3E5CF900B72AD7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		505B91711C3E5CF900B72AD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		505B91731C3E5CF900B72AD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		505B91761C3E5CF900B72AD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		505B917C1C3E5CF900B72AD7 /* KKEngineIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KKEngineIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		505B91811C3E5CF900B72AD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		505B91821C3E5CF900B72AD7 /* KKEngineIOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KKEngineIOSTests.m; sourceTree = "<group>"; };
+		505D66B51C965DA4009B30FC /* KKDrawingPrimitives.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKDrawingPrimitives.cpp; sourceTree = "<group>"; };
+		505D66B61C965DA4009B30FC /* KKDrawingPrimitives.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKDrawingPrimitives.hpp; sourceTree = "<group>"; };
+		505D66B91C96609F009B30FC /* KKShaderProgram.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKShaderProgram.cpp; sourceTree = "<group>"; };
+		505D66BA1C96609F009B30FC /* KKShaderProgram.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKShaderProgram.hpp; sourceTree = "<group>"; };
+		505D66BD1C969C89009B30FC /* KKResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKResourceManager.cpp; sourceTree = "<group>"; };
+		505D66BE1C969C89009B30FC /* KKResourceManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKResourceManager.hpp; sourceTree = "<group>"; };
+		505D66C11C96E5A6009B30FC /* KKFileUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKFileUtil.cpp; sourceTree = "<group>"; };
+		505D66C21C96E5A6009B30FC /* KKFileUtil.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKFileUtil.hpp; sourceTree = "<group>"; };
+		505D66C51C9904B7009B30FC /* KKApplication_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KKApplication_ios.mm; sourceTree = "<group>"; };
+		505D66C71C9933B1009B30FC /* KKResourceManager_mac.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KKResourceManager_mac.mm; sourceTree = "<group>"; };
+		505D66C91C9933EF009B30FC /* KKResourceManager_ios.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = KKResourceManager_ios.mm; sourceTree = "<group>"; };
+		505D66CB1C993DAE009B30FC /* KKShaderHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKShaderHelper.h; sourceTree = "<group>"; };
+		506591A61CD0C3ED00B7FA12 /* semaphore_darwin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = semaphore_darwin.h; sourceTree = "<group>"; };
+		506591A71CD0C3F700B7FA12 /* semaphore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = semaphore.h; sourceTree = "<group>"; };
+		506591A81CD0C76600B7FA12 /* HLImageCodec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HLImageCodec.h; sourceTree = "<group>"; };
+		506591A91CD0E80200B7FA12 /* HLImageETC1Codec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLImageETC1Codec.cpp; sourceTree = "<group>"; };
+		506591AA1CD0E80200B7FA12 /* HLImageETC1Codec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLImageETC1Codec.h; sourceTree = "<group>"; };
+		506591AB1CD0E80200B7FA12 /* HLImageJPEGCodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLImageJPEGCodec.cpp; sourceTree = "<group>"; };
+		506591AC1CD0E80200B7FA12 /* HLImageJPEGCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLImageJPEGCodec.h; sourceTree = "<group>"; };
+		506591AD1CD0E80200B7FA12 /* HLImagePNGCodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLImagePNGCodec.cpp; sourceTree = "<group>"; };
+		506591AE1CD0E80200B7FA12 /* HLImagePNGCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLImagePNGCodec.h; sourceTree = "<group>"; };
+		506591AF1CD0E80200B7FA12 /* HLImagePVRCodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLImagePVRCodec.cpp; sourceTree = "<group>"; };
+		506591B01CD0E80200B7FA12 /* HLImagePVRCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLImagePVRCodec.h; sourceTree = "<group>"; };
+		506591B11CD0E80200B7FA12 /* HLImageWEBPCodec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HLImageWEBPCodec.cpp; sourceTree = "<group>"; };
+		506591B21CD0E80200B7FA12 /* HLImageWEBPCodec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLImageWEBPCodec.h; sourceTree = "<group>"; };
+		506591BD1CD0E93000B7FA12 /* KKGLConfiguration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKGLConfiguration.cpp; sourceTree = "<group>"; };
+		506591BE1CD0E93000B7FA12 /* KKGLConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKGLConfiguration.h; sourceTree = "<group>"; };
+		507BEA611C452C720015F936 /* KKComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKComponent.h; sourceTree = "<group>"; };
+		508564191C93F7610023C7F1 /* KKClippingComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKClippingComponent.cpp; sourceTree = "<group>"; };
+		5085641A1C93F7610023C7F1 /* KKClippingComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKClippingComponent.hpp; sourceTree = "<group>"; };
+		508F9A081CA13A4A00FCADFC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		509C86EC1CE9B82D002E76B2 /* KKView.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKView.cpp; sourceTree = "<group>"; };
+		509C86ED1CE9B82D002E76B2 /* KKView.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKView.hpp; sourceTree = "<group>"; };
+		50C69EFE1C4B937700A299BC /* KKTransform2DComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKTransform2DComponent.cpp; sourceTree = "<group>"; };
+		50C69EFF1C4B937700A299BC /* KKTransform2DComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKTransform2DComponent.hpp; sourceTree = "<group>"; };
+		50C69F021C4B93B700A299BC /* KKScissorComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKScissorComponent.cpp; sourceTree = "<group>"; };
+		50C69F031C4B93B700A299BC /* KKScissorComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKScissorComponent.hpp; sourceTree = "<group>"; };
+		50D0C7B51CE577A5004A8110 /* tree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tree.png; sourceTree = "<group>"; };
+		50D0C7B81CE578F5004A8110 /* KKShaderComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKShaderComponent.cpp; sourceTree = "<group>"; };
+		50D0C7B91CE578F5004A8110 /* KKShaderComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKShaderComponent.hpp; sourceTree = "<group>"; };
+		50D0C7BC1CE5B2AF004A8110 /* ChatBubbleGreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ChatBubbleGreen.png; sourceTree = "<group>"; };
+		50E11D241CB7E4B600CA6D5F /* KKClassRegister.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKClassRegister.cpp; sourceTree = "<group>"; };
+		50E11D251CB7E4B600CA6D5F /* KKClassRegister.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKClassRegister.hpp; sourceTree = "<group>"; };
+		50F05D6B1B5913E3007DA5F7 /* AppDelegate.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AppDelegate.hpp; sourceTree = "<group>"; };
+		50F05D7B1B592567007DA5F7 /* KKEngineMac-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KKEngineMac-Prefix.pch"; sourceTree = "<group>"; };
+		50F05D8D1B5A11B7007DA5F7 /* Atomic */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Atomic; sourceTree = "<group>"; };
+		50F05D8E1B5A11B7007DA5F7 /* Barrier */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Barrier; sourceTree = "<group>"; };
+		50F05D8F1B5A11B7007DA5F7 /* Block */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Block; sourceTree = "<group>"; };
+		50F05D901B5A11B7007DA5F7 /* Condition */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Condition; sourceTree = "<group>"; };
+		50F05D911B5A11B7007DA5F7 /* Config */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Config; sourceTree = "<group>"; };
+		50F05D921B5A11B7007DA5F7 /* Exports */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Exports; sourceTree = "<group>"; };
+		50F05D931B5A11B7007DA5F7 /* Mutex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mutex; sourceTree = "<group>"; };
+		50F05D941B5A11B7007DA5F7 /* ReadWriteMutex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReadWriteMutex; sourceTree = "<group>"; };
+		50F05D951B5A11B7007DA5F7 /* ReentrantMutex */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ReentrantMutex; sourceTree = "<group>"; };
+		50F05D961B5A11B7007DA5F7 /* ScopedLock */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ScopedLock; sourceTree = "<group>"; };
+		50F05D971B5A11B7007DA5F7 /* Thread */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Thread; sourceTree = "<group>"; };
+		50F05D981B5A11B7007DA5F7 /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version; sourceTree = "<group>"; };
+		50F05D9A1B5A11B7007DA5F7 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		50F05D9C1B5A11B7007DA5F7 /* Atomic.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Atomic.cpp; sourceTree = "<group>"; };
+		50F05D9D1B5A11B7007DA5F7 /* Config.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Config.in; sourceTree = "<group>"; };
+		50F05D9E1B5A11B7007DA5F7 /* Version.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Version.cpp; sourceTree = "<group>"; };
+		50F05D9F1B5A11B7007DA5F7 /* Version.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version.in; sourceTree = "<group>"; };
+		50F05DA11B5A11B7007DA5F7 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = "<group>"; };
+		50F05DA21B5A11B7007DA5F7 /* PThread.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PThread.cpp; sourceTree = "<group>"; };
+		50F05DA31B5A11B7007DA5F7 /* PThreadBarrier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PThreadBarrier.cpp; sourceTree = "<group>"; };
+		50F05DA41B5A11B7007DA5F7 /* PThreadBarrierPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PThreadBarrierPrivateData.h; sourceTree = "<group>"; };
+		50F05DA51B5A11B7007DA5F7 /* PThreadCondition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PThreadCondition.cpp; sourceTree = "<group>"; };
+		50F05DA61B5A11B7007DA5F7 /* PThreadConditionPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PThreadConditionPrivateData.h; sourceTree = "<group>"; };
+		50F05DA71B5A11B7007DA5F7 /* PThreadMutex.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PThreadMutex.cpp; sourceTree = "<group>"; };
+		50F05DA81B5A11B7007DA5F7 /* PThreadMutexPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PThreadMutexPrivateData.h; sourceTree = "<group>"; };
+		50F05DA91B5A11B7007DA5F7 /* PThreadPrivateData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PThreadPrivateData.h; sourceTree = "<group>"; };
+		50F4FC901CD752F0005CF05A /* en */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = en; path = button.png; sourceTree = "<group>"; };
+		50F4FC921CD752F0005CF05A /* grass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grass.png; sourceTree = "<group>"; };
+		50F4FC991CD8468E005CF05A /* KKSpriteComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKSpriteComponent.cpp; sourceTree = "<group>"; };
+		50F4FC9A1CD8468E005CF05A /* KKSpriteComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKSpriteComponent.hpp; sourceTree = "<group>"; };
+		50F4FC9F1CD99CA2005CF05A /* KKColorAdvanceComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKColorAdvanceComponent.cpp; sourceTree = "<group>"; };
+		50F4FCA01CD99CA2005CF05A /* KKColorAdvanceComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKColorAdvanceComponent.hpp; sourceTree = "<group>"; };
+		50F4FCA31CD99CBF005CF05A /* KKColorComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKColorComponent.cpp; sourceTree = "<group>"; };
+		50F4FCA41CD99CBF005CF05A /* KKColorComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKColorComponent.hpp; sourceTree = "<group>"; };
+		50F6AC291C43DE7000BDF95C /* KKUtil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKUtil.cpp; sourceTree = "<group>"; };
+		50F6AC2A1C43DE7000BDF95C /* KKUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKUtil.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		50180D2A1B50CB1300388C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				508F9A091CA13A4A00FCADFC /* libz.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50180D3D1B50CB1300388C47 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		505B91611C3E5CF900B72AD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		505B91791C3E5CF900B72AD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50180D241B50CB1300388C47 = {
+			isa = PBXGroup;
+			children = (
+				508F9A081CA13A4A00FCADFC /* libz.tbd */,
+				50180D2F1B50CB1300388C47 /* KKEngine */,
+				50180D431B50CB1300388C47 /* KKEngineTests */,
+				505B91651C3E5CF900B72AD7 /* KKEngineIOS */,
+				505B917F1C3E5CF900B72AD7 /* KKEngineIOSTests */,
+				50F4FC851CD711B0005CF05A /* Resources */,
+				50180D2E1B50CB1300388C47 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		50180D2E1B50CB1300388C47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50180D2D1B50CB1300388C47 /* KKEngine.app */,
+				50180D401B50CB1300388C47 /* KKEngineTests.xctest */,
+				505B91641C3E5CF900B72AD7 /* KKEngineIOS.app */,
+				505B917C1C3E5CF900B72AD7 /* KKEngineIOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50180D2F1B50CB1300388C47 /* KKEngine */ = {
+			isa = PBXGroup;
+			children = (
+				505B91421C3E582600B72AD7 /* src */,
+				50F05D891B5A11B7007DA5F7 /* libs */,
+				50180D341B50CB1300388C47 /* AppDelegate.h */,
+				50180D351B50CB1300388C47 /* AppDelegate.mm */,
+				50F05D6B1B5913E3007DA5F7 /* AppDelegate.hpp */,
+				50180D371B50CB1300388C47 /* Images.xcassets */,
+				50180D391B50CB1300388C47 /* MainMenu.xib */,
+				50180D301B50CB1300388C47 /* Supporting Files */,
+			);
+			path = KKEngine;
+			sourceTree = "<group>";
+		};
+		50180D301B50CB1300388C47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50180D311B50CB1300388C47 /* Info.plist */,
+				50180D321B50CB1300388C47 /* main.mm */,
+				50F05D7B1B592567007DA5F7 /* KKEngineMac-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50180D431B50CB1300388C47 /* KKEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				50180D461B50CB1300388C47 /* KKEngineTests.m */,
+				50180D441B50CB1300388C47 /* Supporting Files */,
+			);
+			path = KKEngineTests;
+			sourceTree = "<group>";
+		};
+		50180D441B50CB1300388C47 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				50180D451B50CB1300388C47 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50265F231C47D88E00B952E0 /* md5 */ = {
+			isa = PBXGroup;
+			children = (
+				50265F241C47D88E00B952E0 /* md5.cpp */,
+				50265F251C47D88E00B952E0 /* md5.h */,
+			);
+			path = md5;
+			sourceTree = "<group>";
+		};
+		5029BE5A1C3FBBD600FD0847 /* glhelpers */ = {
+			isa = PBXGroup;
+			children = (
+				50356B391C43D92A0070021E /* KKGLStateCache.cpp */,
+				50356B3A1C43D92A0070021E /* KKGLStateCache.h */,
+				503E4D0D1C3FC1880035361D /* KKGLMatrixStack.cpp */,
+				503E4D0E1C3FC1880035361D /* KKGLMatrixStack.h */,
+				506591BD1CD0E93000B7FA12 /* KKGLConfiguration.cpp */,
+				506591BE1CD0E93000B7FA12 /* KKGLConfiguration.h */,
+				505D66B51C965DA4009B30FC /* KKDrawingPrimitives.cpp */,
+				505D66B61C965DA4009B30FC /* KKDrawingPrimitives.hpp */,
+				505D66B91C96609F009B30FC /* KKShaderProgram.cpp */,
+				505D66BA1C96609F009B30FC /* KKShaderProgram.hpp */,
+				505D66CB1C993DAE009B30FC /* KKShaderHelper.h */,
+			);
+			path = glhelpers;
+			sourceTree = "<group>";
+		};
+		5037CEA11CD0B44100B27B8B /* textures */ = {
+			isa = PBXGroup;
+			children = (
+				5037CEA21CD0B45800B27B8B /* KKTexture.cpp */,
+				5037CEA31CD0B45800B27B8B /* KKTexture.hpp */,
+				506591A91CD0E80200B7FA12 /* HLImageETC1Codec.cpp */,
+				506591AA1CD0E80200B7FA12 /* HLImageETC1Codec.h */,
+				506591AB1CD0E80200B7FA12 /* HLImageJPEGCodec.cpp */,
+				506591AC1CD0E80200B7FA12 /* HLImageJPEGCodec.h */,
+				506591AD1CD0E80200B7FA12 /* HLImagePNGCodec.cpp */,
+				506591AE1CD0E80200B7FA12 /* HLImagePNGCodec.h */,
+				506591AF1CD0E80200B7FA12 /* HLImagePVRCodec.cpp */,
+				506591B01CD0E80200B7FA12 /* HLImagePVRCodec.h */,
+				506591B11CD0E80200B7FA12 /* HLImageWEBPCodec.cpp */,
+				506591B21CD0E80200B7FA12 /* HLImageWEBPCodec.h */,
+				506591A81CD0C76600B7FA12 /* HLImageCodec.h */,
+			);
+			path = textures;
+			sourceTree = "<group>";
+		};
+		503E4D401C40FEAE0035361D /* kazmath */ = {
+			isa = PBXGroup;
+			children = (
+				503E4D411C40FEAE0035361D /* include */,
+				503E4D521C40FEAE0035361D /* src */,
+			);
+			path = kazmath;
+			sourceTree = "<group>";
+		};
+		503E4D411C40FEAE0035361D /* include */ = {
+			isa = PBXGroup;
+			children = (
+				503E4D421C40FEAE0035361D /* kazmath */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		503E4D421C40FEAE0035361D /* kazmath */ = {
+			isa = PBXGroup;
+			children = (
+				503E4D431C40FEAE0035361D /* aabb.h */,
+				503E4D441C40FEAE0035361D /* GL */,
+				503E4D471C40FEAE0035361D /* kazmath.h */,
+				503E4D481C40FEAE0035361D /* mat3.h */,
+				503E4D491C40FEAE0035361D /* mat4.h */,
+				503E4D4A1C40FEAE0035361D /* neon_matrix_impl.h */,
+				503E4D4B1C40FEAE0035361D /* plane.h */,
+				503E4D4C1C40FEAE0035361D /* quaternion.h */,
+				503E4D4D1C40FEAE0035361D /* ray2.h */,
+				503E4D4E1C40FEAE0035361D /* utility.h */,
+				503E4D4F1C40FEAE0035361D /* vec2.h */,
+				503E4D501C40FEAE0035361D /* vec3.h */,
+				503E4D511C40FEAE0035361D /* vec4.h */,
+			);
+			path = kazmath;
+			sourceTree = "<group>";
+		};
+		503E4D441C40FEAE0035361D /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				503E4D451C40FEAE0035361D /* mat4stack.h */,
+				503E4D461C40FEAE0035361D /* matrix.h */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+		503E4D521C40FEAE0035361D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				503E4D531C40FEAE0035361D /* aabb.c */,
+				503E4D541C40FEAE0035361D /* ChangeLog */,
+				503E4D551C40FEAE0035361D /* CMakeLists.txt */,
+				503E4D561C40FEAE0035361D /* GL */,
+				503E4D591C40FEAE0035361D /* mat3.c */,
+				503E4D5A1C40FEAE0035361D /* mat4.c */,
+				503E4D5B1C40FEAE0035361D /* neon_matrix_impl.c */,
+				503E4D5C1C40FEAE0035361D /* plane.c */,
+				503E4D5D1C40FEAE0035361D /* quaternion.c */,
+				503E4D5E1C40FEAE0035361D /* ray2.c */,
+				503E4D5F1C40FEAE0035361D /* utility.c */,
+				503E4D601C40FEAE0035361D /* vec2.c */,
+				503E4D611C40FEAE0035361D /* vec3.c */,
+				503E4D621C40FEAE0035361D /* vec4.c */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		503E4D561C40FEAE0035361D /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				503E4D571C40FEAE0035361D /* mat4stack.c */,
+				503E4D581C40FEAE0035361D /* matrix.c */,
+			);
+			path = GL;
+			sourceTree = "<group>";
+		};
+		505B91421C3E582600B72AD7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				509C86EB1CE9B80A002E76B2 /* gui */,
+				5037CEA11CD0B44100B27B8B /* textures */,
+				5029BE5A1C3FBBD600FD0847 /* glhelpers */,
+				505B918A1C3E784700B72AD7 /* core */,
+				505B91431C3E582600B72AD7 /* application */,
+				505B91491C3E582600B72AD7 /* base */,
+				505B914E1C3E582600B72AD7 /* common */,
+				505B91521C3E582600B72AD7 /* ios */,
+				505B91531C3E582600B72AD7 /* mac */,
+			);
+			name = src;
+			path = ../../src;
+			sourceTree = "<group>";
+		};
+		505B91431C3E582600B72AD7 /* application */ = {
+			isa = PBXGroup;
+			children = (
+				505B91441C3E582600B72AD7 /* KKApplication.cpp */,
+				505B91451C3E582600B72AD7 /* KKApplication.h */,
+				505B91461C3E582600B72AD7 /* KKApplicationProtocol.h */,
+				505B91471C3E582600B72AD7 /* KKDirector.cpp */,
+				505B91481C3E582600B72AD7 /* KKDirector.h */,
+			);
+			path = application;
+			sourceTree = "<group>";
+		};
+		505B91491C3E582600B72AD7 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				505B914A1C3E582600B72AD7 /* KKAutoreleasePool.cpp */,
+				505B914B1C3E582600B72AD7 /* KKAutoreleasePool.h */,
+				505B914C1C3E582600B72AD7 /* KKObject.cpp */,
+				505B914D1C3E582600B72AD7 /* KKObject.h */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		505B914E1C3E582600B72AD7 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				50F6AC291C43DE7000BDF95C /* KKUtil.cpp */,
+				50F6AC2A1C43DE7000BDF95C /* KKUtil.h */,
+				5029BE551C3E81DD00FD0847 /* KKDelegate.h */,
+				5029BE561C3E81DD00FD0847 /* KKDelegateImpl.h */,
+				505B914F1C3E582600B72AD7 /* GameEngineConfig.h */,
+				505B91501C3E582600B72AD7 /* KKMacros.h */,
+				505B91511C3E582600B72AD7 /* KKSingleton.h */,
+				5029BE591C3FAD6000FD0847 /* KKGL.h */,
+				503E4D841C4109EA0035361D /* KKGeometry.h */,
+				50265F1F1C47D78900B952E0 /* KKStringUtil.cpp */,
+				50265F201C47D78900B952E0 /* KKStringUtil.hpp */,
+				505D66C11C96E5A6009B30FC /* KKFileUtil.cpp */,
+				505D66C21C96E5A6009B30FC /* KKFileUtil.hpp */,
+				50E11D241CB7E4B600CA6D5F /* KKClassRegister.cpp */,
+				50E11D251CB7E4B600CA6D5F /* KKClassRegister.hpp */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		505B91521C3E582600B72AD7 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				505D66C51C9904B7009B30FC /* KKApplication_ios.mm */,
+				505D66C91C9933EF009B30FC /* KKResourceManager_ios.mm */,
+				506591A71CD0C3F700B7FA12 /* semaphore.h */,
+			);
+			path = ios;
+			sourceTree = "<group>";
+		};
+		505B91531C3E582600B72AD7 /* mac */ = {
+			isa = PBXGroup;
+			children = (
+				506591A61CD0C3ED00B7FA12 /* semaphore_darwin.h */,
+				505B91541C3E582600B72AD7 /* KKApplication_mac.mm */,
+				505B91551C3E582600B72AD7 /* KKDirectorCaller_mac.h */,
+				505B91561C3E582600B72AD7 /* KKDirectorCaller_mac.mm */,
+				505B91571C3E582600B72AD7 /* KKGLView.h */,
+				505B91581C3E582600B72AD7 /* KKGLView.mm */,
+				505D66C71C9933B1009B30FC /* KKResourceManager_mac.mm */,
+			);
+			path = mac;
+			sourceTree = "<group>";
+		};
+		505B91651C3E5CF900B72AD7 /* KKEngineIOS */ = {
+			isa = PBXGroup;
+			children = (
+				505B916A1C3E5CF900B72AD7 /* AppDelegate.h */,
+				505B916B1C3E5CF900B72AD7 /* AppDelegate.m */,
+				505B916D1C3E5CF900B72AD7 /* ViewController.h */,
+				505B916E1C3E5CF900B72AD7 /* ViewController.m */,
+				505B91701C3E5CF900B72AD7 /* Main.storyboard */,
+				505B91731C3E5CF900B72AD7 /* Images.xcassets */,
+				505B91751C3E5CF900B72AD7 /* LaunchScreen.xib */,
+				505B91661C3E5CF900B72AD7 /* Supporting Files */,
+			);
+			path = KKEngineIOS;
+			sourceTree = "<group>";
+		};
+		505B91661C3E5CF900B72AD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				505B91671C3E5CF900B72AD7 /* Info.plist */,
+				505B91681C3E5CF900B72AD7 /* main.mm */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		505B917F1C3E5CF900B72AD7 /* KKEngineIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				505B91821C3E5CF900B72AD7 /* KKEngineIOSTests.m */,
+				505B91801C3E5CF900B72AD7 /* Supporting Files */,
+			);
+			path = KKEngineIOSTests;
+			sourceTree = "<group>";
+		};
+		505B91801C3E5CF900B72AD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				505B91811C3E5CF900B72AD7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		505B918A1C3E784700B72AD7 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				50C69EFD1C4B937700A299BC /* components */,
+				5029BE4D1C3E7A8000FD0847 /* KKTimer.cpp */,
+				5029BE4E1C3E7A8000FD0847 /* KKTimer.h */,
+				507BEA611C452C720015F936 /* KKComponent.h */,
+				50265F0E1C45FEA600B952E0 /* KKEntityManager.cpp */,
+				50265F0F1C45FEA600B952E0 /* KKEntityManager.hpp */,
+				50265F171C466BDD00B952E0 /* KKSceneManager.cpp */,
+				50265F181C466BDD00B952E0 /* KKSceneManager.hpp */,
+				505D66BD1C969C89009B30FC /* KKResourceManager.cpp */,
+				505D66BE1C969C89009B30FC /* KKResourceManager.hpp */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		509C86EB1CE9B80A002E76B2 /* gui */ = {
+			isa = PBXGroup;
+			children = (
+				509C86EC1CE9B82D002E76B2 /* KKView.cpp */,
+				509C86ED1CE9B82D002E76B2 /* KKView.hpp */,
+			);
+			path = gui;
+			sourceTree = "<group>";
+		};
+		50C69EFD1C4B937700A299BC /* components */ = {
+			isa = PBXGroup;
+			children = (
+				50C69EFE1C4B937700A299BC /* KKTransform2DComponent.cpp */,
+				50C69EFF1C4B937700A299BC /* KKTransform2DComponent.hpp */,
+				50C69F021C4B93B700A299BC /* KKScissorComponent.cpp */,
+				50C69F031C4B93B700A299BC /* KKScissorComponent.hpp */,
+				508564191C93F7610023C7F1 /* KKClippingComponent.cpp */,
+				5085641A1C93F7610023C7F1 /* KKClippingComponent.hpp */,
+				50F4FC991CD8468E005CF05A /* KKSpriteComponent.cpp */,
+				50F4FC9A1CD8468E005CF05A /* KKSpriteComponent.hpp */,
+				50F4FC9F1CD99CA2005CF05A /* KKColorAdvanceComponent.cpp */,
+				50F4FCA01CD99CA2005CF05A /* KKColorAdvanceComponent.hpp */,
+				50F4FCA31CD99CBF005CF05A /* KKColorComponent.cpp */,
+				50F4FCA41CD99CBF005CF05A /* KKColorComponent.hpp */,
+				50D0C7B81CE578F5004A8110 /* KKShaderComponent.cpp */,
+				50D0C7B91CE578F5004A8110 /* KKShaderComponent.hpp */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		50F05D891B5A11B7007DA5F7 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				50265F231C47D88E00B952E0 /* md5 */,
+				503E4D401C40FEAE0035361D /* kazmath */,
+				50F05D8A1B5A11B7007DA5F7 /* OpenThreads */,
+			);
+			name = libs;
+			path = ../../libs;
+			sourceTree = "<group>";
+		};
+		50F05D8A1B5A11B7007DA5F7 /* OpenThreads */ = {
+			isa = PBXGroup;
+			children = (
+				50F05D8B1B5A11B7007DA5F7 /* include */,
+				50F05D991B5A11B7007DA5F7 /* src */,
+			);
+			path = OpenThreads;
+			sourceTree = "<group>";
+		};
+		50F05D8B1B5A11B7007DA5F7 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				50F05D8C1B5A11B7007DA5F7 /* OpenThreads */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		50F05D8C1B5A11B7007DA5F7 /* OpenThreads */ = {
+			isa = PBXGroup;
+			children = (
+				50F05D8D1B5A11B7007DA5F7 /* Atomic */,
+				50F05D8E1B5A11B7007DA5F7 /* Barrier */,
+				50F05D8F1B5A11B7007DA5F7 /* Block */,
+				50F05D901B5A11B7007DA5F7 /* Condition */,
+				50F05D911B5A11B7007DA5F7 /* Config */,
+				50F05D921B5A11B7007DA5F7 /* Exports */,
+				50F05D931B5A11B7007DA5F7 /* Mutex */,
+				50F05D941B5A11B7007DA5F7 /* ReadWriteMutex */,
+				50F05D951B5A11B7007DA5F7 /* ReentrantMutex */,
+				50F05D961B5A11B7007DA5F7 /* ScopedLock */,
+				50F05D971B5A11B7007DA5F7 /* Thread */,
+				50F05D981B5A11B7007DA5F7 /* Version */,
+			);
+			path = OpenThreads;
+			sourceTree = "<group>";
+		};
+		50F05D991B5A11B7007DA5F7 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				50F05D9A1B5A11B7007DA5F7 /* CMakeLists.txt */,
+				50F05D9B1B5A11B7007DA5F7 /* common */,
+				50F05DA01B5A11B7007DA5F7 /* pthreads */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		50F05D9B1B5A11B7007DA5F7 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				50F05D9C1B5A11B7007DA5F7 /* Atomic.cpp */,
+				50F05D9D1B5A11B7007DA5F7 /* Config.in */,
+				50F05D9E1B5A11B7007DA5F7 /* Version.cpp */,
+				50F05D9F1B5A11B7007DA5F7 /* Version.in */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		50F05DA01B5A11B7007DA5F7 /* pthreads */ = {
+			isa = PBXGroup;
+			children = (
+				50F05DA11B5A11B7007DA5F7 /* CMakeLists.txt */,
+				50F05DA21B5A11B7007DA5F7 /* PThread.cpp */,
+				50F05DA31B5A11B7007DA5F7 /* PThreadBarrier.cpp */,
+				50F05DA41B5A11B7007DA5F7 /* PThreadBarrierPrivateData.h */,
+				50F05DA51B5A11B7007DA5F7 /* PThreadCondition.cpp */,
+				50F05DA61B5A11B7007DA5F7 /* PThreadConditionPrivateData.h */,
+				50F05DA71B5A11B7007DA5F7 /* PThreadMutex.cpp */,
+				50F05DA81B5A11B7007DA5F7 /* PThreadMutexPrivateData.h */,
+				50F05DA91B5A11B7007DA5F7 /* PThreadPrivateData.h */,
+			);
+			path = pthreads;
+			sourceTree = "<group>";
+		};
+		50F4FC851CD711B0005CF05A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				50D0C7BC1CE5B2AF004A8110 /* ChatBubbleGreen.png */,
+				50D0C7B51CE577A5004A8110 /* tree.png */,
+				50F4FC8E1CD752F0005CF05A /* en.lproj */,
+				50F4FC921CD752F0005CF05A /* grass.png */,
+			);
+			name = Resources;
+			path = KKEngine/Resources;
+			sourceTree = "<group>";
+		};
+		50F4FC8E1CD752F0005CF05A /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				50F4FC8F1CD752F0005CF05A /* button.png */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		50180D2C1B50CB1300388C47 /* KKEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50180D4A1B50CB1300388C47 /* Build configuration list for PBXNativeTarget "KKEngine" */;
+			buildPhases = (
+				50180D291B50CB1300388C47 /* Sources */,
+				50180D2A1B50CB1300388C47 /* Frameworks */,
+				50180D2B1B50CB1300388C47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKEngine;
+			productName = KKEngine;
+			productReference = 50180D2D1B50CB1300388C47 /* KKEngine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		50180D3F1B50CB1300388C47 /* KKEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 50180D4D1B50CB1300388C47 /* Build configuration list for PBXNativeTarget "KKEngineTests" */;
+			buildPhases = (
+				50180D3C1B50CB1300388C47 /* Sources */,
+				50180D3D1B50CB1300388C47 /* Frameworks */,
+				50180D3E1B50CB1300388C47 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50180D421B50CB1300388C47 /* PBXTargetDependency */,
+			);
+			name = KKEngineTests;
+			productName = KKEngineTests;
+			productReference = 50180D401B50CB1300388C47 /* KKEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		505B91631C3E5CF900B72AD7 /* KKEngineIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 505B91841C3E5CF900B72AD7 /* Build configuration list for PBXNativeTarget "KKEngineIOS" */;
+			buildPhases = (
+				505B91601C3E5CF900B72AD7 /* Sources */,
+				505B91611C3E5CF900B72AD7 /* Frameworks */,
+				505B91621C3E5CF900B72AD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KKEngineIOS;
+			productName = KKEngineIOS;
+			productReference = 505B91641C3E5CF900B72AD7 /* KKEngineIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		505B917B1C3E5CF900B72AD7 /* KKEngineIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 505B91871C3E5CF900B72AD7 /* Build configuration list for PBXNativeTarget "KKEngineIOSTests" */;
+			buildPhases = (
+				505B91781C3E5CF900B72AD7 /* Sources */,
+				505B91791C3E5CF900B72AD7 /* Frameworks */,
+				505B917A1C3E5CF900B72AD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				505B917E1C3E5CF900B72AD7 /* PBXTargetDependency */,
+			);
+			name = KKEngineIOSTests;
+			productName = KKEngineIOSTests;
+			productReference = 505B917C1C3E5CF900B72AD7 /* KKEngineIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		50180D251B50CB1300388C47 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = kewei;
+				TargetAttributes = {
+					50180D2C1B50CB1300388C47 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					50180D3F1B50CB1300388C47 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 50180D2C1B50CB1300388C47;
+					};
+					505B91631C3E5CF900B72AD7 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					505B917B1C3E5CF900B72AD7 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 505B91631C3E5CF900B72AD7;
+					};
+				};
+			};
+			buildConfigurationList = 50180D281B50CB1300388C47 /* Build configuration list for PBXProject "KKEngine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 50180D241B50CB1300388C47;
+			productRefGroup = 50180D2E1B50CB1300388C47 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				50180D2C1B50CB1300388C47 /* KKEngine */,
+				50180D3F1B50CB1300388C47 /* KKEngineTests */,
+				505B91631C3E5CF900B72AD7 /* KKEngineIOS */,
+				505B917B1C3E5CF900B72AD7 /* KKEngineIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		50180D2B1B50CB1300388C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F05DD61B5A11B7007DA5F7 /* Thread in Resources */,
+				50F05DD71B5A11B7007DA5F7 /* Version in Resources */,
+				50180D381B50CB1300388C47 /* Images.xcassets in Resources */,
+				50D0C7BD1CE5B2AF004A8110 /* ChatBubbleGreen.png in Resources */,
+				50F05DD51B5A11B7007DA5F7 /* ScopedLock in Resources */,
+				503E4D671C40FEAE0035361D /* CMakeLists.txt in Resources */,
+				50F05DDA1B5A11B7007DA5F7 /* Config.in in Resources */,
+				50F05DCE1B5A11B7007DA5F7 /* Block in Resources */,
+				50F4FC931CD752F0005CF05A /* button.png in Resources */,
+				50F05DD21B5A11B7007DA5F7 /* Mutex in Resources */,
+				50F05DDD1B5A11B7007DA5F7 /* CMakeLists.txt in Resources */,
+				50F05DCD1B5A11B7007DA5F7 /* Barrier in Resources */,
+				50F4FC971CD752F0005CF05A /* grass.png in Resources */,
+				50F05DD11B5A11B7007DA5F7 /* Exports in Resources */,
+				507BEA5F1C44EF9B0015F936 /* MainMenu.xib in Resources */,
+				50F05DD31B5A11B7007DA5F7 /* ReadWriteMutex in Resources */,
+				50F05DCF1B5A11B7007DA5F7 /* Condition in Resources */,
+				50D0C7B61CE577A5004A8110 /* tree.png in Resources */,
+				50F05DD01B5A11B7007DA5F7 /* Config in Resources */,
+				50F05DDC1B5A11B7007DA5F7 /* Version.in in Resources */,
+				50F05DD41B5A11B7007DA5F7 /* ReentrantMutex in Resources */,
+				50F05DCC1B5A11B7007DA5F7 /* Atomic in Resources */,
+				50F05DD81B5A11B7007DA5F7 /* CMakeLists.txt in Resources */,
+				503E4D651C40FEAE0035361D /* ChangeLog in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50180D3E1B50CB1300388C47 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		505B91621C3E5CF900B72AD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				505B91721C3E5CF900B72AD7 /* Main.storyboard in Resources */,
+				50F4FC941CD752F0005CF05A /* button.png in Resources */,
+				503E4D661C40FEAE0035361D /* ChangeLog in Resources */,
+				50D0C7BE1CE5B2AF004A8110 /* ChatBubbleGreen.png in Resources */,
+				50D0C7B71CE577A5004A8110 /* tree.png in Resources */,
+				50F4FC981CD752F0005CF05A /* grass.png in Resources */,
+				505B91771C3E5CF900B72AD7 /* LaunchScreen.xib in Resources */,
+				505B91741C3E5CF900B72AD7 /* Images.xcassets in Resources */,
+				503E4D681C40FEAE0035361D /* CMakeLists.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		505B917A1C3E5CF900B72AD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		50180D291B50CB1300388C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50F4FC9B1CD8468E005CF05A /* KKSpriteComponent.cpp in Sources */,
+				505B91591C3E582600B72AD7 /* KKApplication.cpp in Sources */,
+				50356B3B1C43D92A0070021E /* KKGLStateCache.cpp in Sources */,
+				506591B51CD0E80200B7FA12 /* HLImageJPEGCodec.cpp in Sources */,
+				50F05DD91B5A11B7007DA5F7 /* Atomic.cpp in Sources */,
+				506591B71CD0E80200B7FA12 /* HLImagePNGCodec.cpp in Sources */,
+				50F05DDF1B5A11B7007DA5F7 /* PThreadBarrier.cpp in Sources */,
+				50F05DDB1B5A11B7007DA5F7 /* Version.cpp in Sources */,
+				5037CEA41CD0B45800B27B8B /* KKTexture.cpp in Sources */,
+				50F6AC351C44ADF400BDF95C /* KKGLView.mm in Sources */,
+				506591B31CD0E80200B7FA12 /* HLImageETC1Codec.cpp in Sources */,
+				503E4D6F1C40FEAE0035361D /* mat4.c in Sources */,
+				505D66B71C965DA4009B30FC /* KKDrawingPrimitives.cpp in Sources */,
+				50F6AC2E1C44AB6800BDF95C /* main.mm in Sources */,
+				503E4D7D1C40FEAE0035361D /* vec3.c in Sources */,
+				503E4D631C40FEAE0035361D /* aabb.c in Sources */,
+				505D66C31C96E5A6009B30FC /* KKFileUtil.cpp in Sources */,
+				503E4D7F1C40FEAE0035361D /* vec4.c in Sources */,
+				505B915B1C3E582600B72AD7 /* KKAutoreleasePool.cpp in Sources */,
+				505B915C1C3E582600B72AD7 /* KKObject.cpp in Sources */,
+				505D66BF1C969C89009B30FC /* KKResourceManager.cpp in Sources */,
+				50F4FCA11CD99CA2005CF05A /* KKColorAdvanceComponent.cpp in Sources */,
+				50F05DE01B5A11B7007DA5F7 /* PThreadCondition.cpp in Sources */,
+				505D66BB1C96609F009B30FC /* KKShaderProgram.cpp in Sources */,
+				50C69F001C4B937700A299BC /* KKTransform2DComponent.cpp in Sources */,
+				5085641B1C93F7610023C7F1 /* KKClippingComponent.cpp in Sources */,
+				50F05DDE1B5A11B7007DA5F7 /* PThread.cpp in Sources */,
+				503E4D731C40FEAE0035361D /* plane.c in Sources */,
+				50F05D6C1B5913E3007DA5F7 /* AppDelegate.hpp in Sources */,
+				503E4D691C40FEAE0035361D /* mat4stack.c in Sources */,
+				509C86EE1CE9B82D002E76B2 /* KKView.cpp in Sources */,
+				503E4D6B1C40FEAE0035361D /* matrix.c in Sources */,
+				50265F211C47D78900B952E0 /* KKStringUtil.cpp in Sources */,
+				506591B91CD0E80200B7FA12 /* HLImagePVRCodec.cpp in Sources */,
+				503E4D791C40FEAE0035361D /* utility.c in Sources */,
+				503E4D0F1C3FC1880035361D /* KKGLMatrixStack.cpp in Sources */,
+				50265F191C466BDD00B952E0 /* KKSceneManager.cpp in Sources */,
+				50F6AC341C44ADDF00BDF95C /* KKDirectorCaller_mac.mm in Sources */,
+				50265F101C45FEA600B952E0 /* KKEntityManager.cpp in Sources */,
+				50F6AC2B1C43DE7000BDF95C /* KKUtil.cpp in Sources */,
+				50F6AC2D1C44A98800BDF95C /* KKDirector.cpp in Sources */,
+				503E4D771C40FEAE0035361D /* ray2.c in Sources */,
+				506591BF1CD0E93000B7FA12 /* KKGLConfiguration.cpp in Sources */,
+				505D66C81C9933B1009B30FC /* KKResourceManager_mac.mm in Sources */,
+				506591BB1CD0E80200B7FA12 /* HLImageWEBPCodec.cpp in Sources */,
+				50C69F041C4B93B700A299BC /* KKScissorComponent.cpp in Sources */,
+				50F4FCA51CD99CBF005CF05A /* KKColorComponent.cpp in Sources */,
+				50F05DE11B5A11B7007DA5F7 /* PThreadMutex.cpp in Sources */,
+				503E4D7B1C40FEAE0035361D /* vec2.c in Sources */,
+				50F6AC331C44ADDB00BDF95C /* KKApplication_mac.mm in Sources */,
+				50265F261C47D88E00B952E0 /* md5.cpp in Sources */,
+				503E4D751C40FEAE0035361D /* quaternion.c in Sources */,
+				50E11D261CB7E4B600CA6D5F /* KKClassRegister.cpp in Sources */,
+				503E4D711C40FEAE0035361D /* neon_matrix_impl.c in Sources */,
+				503E4D6D1C40FEAE0035361D /* mat3.c in Sources */,
+				50D0C7BA1CE578F5004A8110 /* KKShaderComponent.cpp in Sources */,
+				50F6AC321C44ADD000BDF95C /* AppDelegate.mm in Sources */,
+				5029BE4F1C3E7A8000FD0847 /* KKTimer.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50180D3C1B50CB1300388C47 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50180D471B50CB1300388C47 /* KKEngineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		505B91601C3E5CF900B72AD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				50C69F051C4B93B700A299BC /* KKScissorComponent.cpp in Sources */,
+				5085641C1C93F7610023C7F1 /* KKClippingComponent.cpp in Sources */,
+				503E4D721C40FEAE0035361D /* neon_matrix_impl.c in Sources */,
+				503E4D741C40FEAE0035361D /* plane.c in Sources */,
+				50C69F011C4B938000A299BC /* KKTransform2DComponent.cpp in Sources */,
+				503E4D6E1C40FEAE0035361D /* mat3.c in Sources */,
+				509C86EF1CE9B82D002E76B2 /* KKView.cpp in Sources */,
+				506591B81CD0E80200B7FA12 /* HLImagePNGCodec.cpp in Sources */,
+				505D66CA1C9933EF009B30FC /* KKResourceManager_ios.mm in Sources */,
+				506591B41CD0E80200B7FA12 /* HLImageETC1Codec.cpp in Sources */,
+				505D66B81C965DA4009B30FC /* KKDrawingPrimitives.cpp in Sources */,
+				503E4D7C1C40FEAE0035361D /* vec2.c in Sources */,
+				505D66BC1C96609F009B30FC /* KKShaderProgram.cpp in Sources */,
+				50D0C7BB1CE578F5004A8110 /* KKShaderComponent.cpp in Sources */,
+				506591BA1CD0E80200B7FA12 /* HLImagePVRCodec.cpp in Sources */,
+				505D66C41C96E5A6009B30FC /* KKFileUtil.cpp in Sources */,
+				50E11D271CB7E4B600CA6D5F /* KKClassRegister.cpp in Sources */,
+				503E4D701C40FEAE0035361D /* mat4.c in Sources */,
+				503E4D801C40FEAE0035361D /* vec4.c in Sources */,
+				50265F1A1C466BDD00B952E0 /* KKSceneManager.cpp in Sources */,
+				503E4D6A1C40FEAE0035361D /* mat4stack.c in Sources */,
+				503E4D7E1C40FEAE0035361D /* vec3.c in Sources */,
+				503E4D781C40FEAE0035361D /* ray2.c in Sources */,
+				503E4D101C3FC1880035361D /* KKGLMatrixStack.cpp in Sources */,
+				505B916F1C3E5CF900B72AD7 /* ViewController.m in Sources */,
+				505D66C01C969C89009B30FC /* KKResourceManager.cpp in Sources */,
+				506591BC1CD0E80200B7FA12 /* HLImageWEBPCodec.cpp in Sources */,
+				50F4FCA21CD99CA2005CF05A /* KKColorAdvanceComponent.cpp in Sources */,
+				50F6AC2C1C43DE7000BDF95C /* KKUtil.cpp in Sources */,
+				503E4D761C40FEAE0035361D /* quaternion.c in Sources */,
+				506591B61CD0E80200B7FA12 /* HLImageJPEGCodec.cpp in Sources */,
+				50356B3C1C43D92A0070021E /* KKGLStateCache.cpp in Sources */,
+				5029BE501C3E7A8000FD0847 /* KKTimer.cpp in Sources */,
+				5037CEA51CD0B45800B27B8B /* KKTexture.cpp in Sources */,
+				503E4D6C1C40FEAE0035361D /* matrix.c in Sources */,
+				50F4FCA61CD99CBF005CF05A /* KKColorComponent.cpp in Sources */,
+				50265F111C45FEA600B952E0 /* KKEntityManager.cpp in Sources */,
+				505B916C1C3E5CF900B72AD7 /* AppDelegate.m in Sources */,
+				505D66C61C9904B7009B30FC /* KKApplication_ios.mm in Sources */,
+				50265F221C47D78900B952E0 /* KKStringUtil.cpp in Sources */,
+				50F4FC9C1CD8468E005CF05A /* KKSpriteComponent.cpp in Sources */,
+				50265F271C47D88E00B952E0 /* md5.cpp in Sources */,
+				505B91691C3E5CF900B72AD7 /* main.mm in Sources */,
+				503E4D7A1C40FEAE0035361D /* utility.c in Sources */,
+				506591C01CD0E93000B7FA12 /* KKGLConfiguration.cpp in Sources */,
+				503E4D641C40FEAE0035361D /* aabb.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		505B91781C3E5CF900B72AD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				505B91831C3E5CF900B72AD7 /* KKEngineIOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		50180D421B50CB1300388C47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 50180D2C1B50CB1300388C47 /* KKEngine */;
+			targetProxy = 50180D411B50CB1300388C47 /* PBXContainerItemProxy */;
+		};
+		505B917E1C3E5CF900B72AD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 505B91631C3E5CF900B72AD7 /* KKEngineIOS */;
+			targetProxy = 505B917D1C3E5CF900B72AD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		50180D391B50CB1300388C47 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50180D3A1B50CB1300388C47 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		505B91701C3E5CF900B72AD7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				505B91711C3E5CF900B72AD7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		505B91751C3E5CF900B72AD7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				505B91761C3E5CF900B72AD7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		50F4FC8F1CD752F0005CF05A /* button.png */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50F4FC901CD752F0005CF05A /* en */,
+			);
+			name = button.png;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		50180D481B50CB1300388C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		50180D491B50CB1300388C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		50180D4B1B50CB1300388C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"";
+				GCC_PREFIX_HEADER = "KKEngine/KKEngineMac-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../libs/OpenThreads/include,
+					../libs/kazmath/include,
+					../libs/png/mac/include,
+					../libs/jpeg/mac/include,
+					../libs/webp/mac/include,
+				);
+				INFOPLIST_FILE = KKEngine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					../libs/webp/mac/lib,
+					../libs/jpeg/mac/lib,
+					../libs/png/mac/lib,
+				);
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					OpenGL,
+					"-framework",
+					AppKit,
+					"-framework",
+					CoreVideo,
+					"-lpng",
+					"-ljpeg",
+					"-lwebp",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		50180D4C1B50CB1300388C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"";
+				GCC_PREFIX_HEADER = "KKEngine/KKEngineMac-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					../libs/OpenThreads/include,
+					../libs/kazmath/include,
+					../libs/png/mac/include,
+					../libs/jpeg/mac/include,
+					../libs/webp/mac/include,
+				);
+				INFOPLIST_FILE = KKEngine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					../libs/webp/mac/lib,
+					../libs/jpeg/mac/lib,
+					../libs/png/mac/lib,
+				);
+				OTHER_LDFLAGS = (
+					"-framework",
+					OpenGL,
+					"-framework",
+					AppKit,
+					"-framework",
+					CoreVideo,
+					"-lpng",
+					"-ljpeg",
+					"-lwebp",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		50180D4E1B50CB1300388C47 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KKEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKEngine.app/Contents/MacOS/KKEngine";
+			};
+			name = Debug;
+		};
+		50180D4F1B50CB1300388C47 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KKEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKEngine.app/Contents/MacOS/KKEngine";
+			};
+			name = Release;
+		};
+		505B91851C3E5CF900B72AD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KKEngineIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		505B91861C3E5CF900B72AD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = KKEngineIOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		505B91881C3E5CF900B72AD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KKEngineIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKEngineIOS.app/KKEngineIOS";
+			};
+			name = Debug;
+		};
+		505B91891C3E5CF900B72AD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = KKEngineIOSTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KKEngineIOS.app/KKEngineIOS";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		50180D281B50CB1300388C47 /* Build configuration list for PBXProject "KKEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50180D481B50CB1300388C47 /* Debug */,
+				50180D491B50CB1300388C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50180D4A1B50CB1300388C47 /* Build configuration list for PBXNativeTarget "KKEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50180D4B1B50CB1300388C47 /* Debug */,
+				50180D4C1B50CB1300388C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		50180D4D1B50CB1300388C47 /* Build configuration list for PBXNativeTarget "KKEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				50180D4E1B50CB1300388C47 /* Debug */,
+				50180D4F1B50CB1300388C47 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		505B91841C3E5CF900B72AD7 /* Build configuration list for PBXNativeTarget "KKEngineIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				505B91851C3E5CF900B72AD7 /* Debug */,
+				505B91861C3E5CF900B72AD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		505B91871C3E5CF900B72AD7 /* Build configuration list for PBXNativeTarget "KKEngineIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				505B91881C3E5CF900B72AD7 /* Debug */,
+				505B91891C3E5CF900B72AD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 50180D251B50CB1300388C47 /* Project object */;
+}
