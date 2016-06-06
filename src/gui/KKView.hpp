@@ -254,7 +254,7 @@ public:
     void topInParent();
     void bottomInParent();
     
-    //virtual void visit();
+    virtual void visit() {}
     
 protected:
     virtual void onDraw();
