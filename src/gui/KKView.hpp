@@ -254,7 +254,14 @@ public:
     void topInParent();
     void bottomInParent();
     
-    virtual void visit() {}
+    virtual void visit();
+    
+protected:
+    //add func for matrixstack
+    kmMat4 *getFriansform()
+    {
+        
+    }
     
 protected:
     virtual void onDraw();

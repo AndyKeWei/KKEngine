@@ -73,7 +73,17 @@ void KKView::bottomInParent()
 }
 
 
-
+void KKView::visit()
+{
+    if (!mVisible)
+    {
+        return;
+    }
+    
+    KKGLMatrixStack *matrixStack = KKGLMatrixStack::currentMatrixStack();
+    matrixStack->pushMatrix();
+    
+}
 
 
 
