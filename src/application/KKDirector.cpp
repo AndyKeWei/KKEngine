@@ -159,8 +159,8 @@ KKPoint KKDirector::convertToGLPoint(const KKPoint &p) const
         KKSize pixelsSize = mWinSizeInPixels;
         KKPoint point = p;
         point.y = pixelsSize.height - p.y;
-        point.x += (pixelsSize.width - winSize.width) / 2.f;
-        point.y += (pixelsSize.height - winSize.height) / 2.f;
+        point.x -= (pixelsSize.width - winSize.width) / 2.f;
+        point.y -= (pixelsSize.height - winSize.height) / 2.f;
         return point * scale;
     }
 }
@@ -179,8 +179,8 @@ KKPoint KKDirector::convertToScreenPoint(const KKPoint &p) const
         KKPoint point = p;
         point /= scale;
         point.y = pixelsSize.height - point.y;
-        point.x -= (pixelsSize.width - winSize.width) / 2.f;
-        point.y -= (pixelsSize.height - winSize.height) / 2.f;
+        point.x += (pixelsSize.width - winSize.width) / 2.f;
+        point.y += (pixelsSize.height - winSize.height) / 2.f;
         return point / CONTENT_SCALE_FACTOR;
     }
 }

@@ -17,20 +17,30 @@
 #include "kazmath/GL/matrix.h"
 #include "KKGeometry.h"
 #include "KKComponent.h"
-
+#include "KKEventType.h"
+//#include "KKTouchDispatcher.hpp"
 
 NS_KK_BEGIN
 
 
 class KKComponent;
+class KKEntity;
 class KKEntityManager;
+class KKSceneManager;
 
 typedef CMultiDelegate1<float> KKEntityUpdateHandler;
 typedef CMultiDelegate0 KKEntityDrawHandler;
+typedef CMultiDelegate1<KKTouchEvent*> KKEntityTouchHandler;
+#if defined(TARGET_MACOS)
+typedef CMultiDelegate1<KKMouseEvent*> KKEntityMouseHandler;
+#endif
+typedef CMultiDelegate3<kmMat4*, const KKPoint&, bool*> KKEntityHitTestHandler;
+
 
 class KKEntity {
     friend class KKEntityManager;
 private:
+    int mLastEvent = 0;
     bool mVisible {true};
     bool mUserInteractionEnabled {false};
     bool mHitTestEnabled {true};
@@ -56,6 +66,11 @@ public:
     
     KKEntityUpdateHandler onUpdateHandler;
     KKEntityDrawHandler onDrawHandler;
+    KKEntityTouchHandler onTouchEvent;
+#if defined(TARGET_MACOS)
+    KKEntityMouseHandler onMouseEvent;
+#endif
+    KKEntityHitTestHandler onHitTest;
     
     std::function<void()> onDraw;
     
@@ -69,7 +84,7 @@ public:
         mUserInteractionEnabled = b;
     }
     
-    bool userInteractionEnabled() const
+    bool userInteractionEnabled() 
     {
         return mUserInteractionEnabled;
     }
@@ -174,10 +189,11 @@ public:
     void removeComponent(KKComponent *comp);
     
     KKEntity *hitTest(kmMat4* preTransform, const KKPoint &point);
+    
+    const void dispatchTouchEvent(KKTouchEvent *event);
+    
+    KKEntity *getEntityToDispatchEvent(std::vector<KKPoint> location);
 };
-
-class KKSceneManager;
-class KKEntity;
 
 class KKEntityManager {
     friend class KKSceneManager;
@@ -200,7 +216,7 @@ public:
     KKEntityManager(){}
     ~KKEntityManager();
     
-    KKSceneManager *getSceneManager() const { return mSceneMgr; }
+    KKSceneManager *getSceneManager() { return mSceneMgr; }
     
     template<typename T = KKComponent> void getEntities(std::vector<KKEntity *> &result)
     {

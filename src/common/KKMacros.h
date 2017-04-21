@@ -140,5 +140,9 @@ friend CLASS; \
 #define CONTENT_SCALE_FACTOR  1
 #endif
 
+#ifndef FLT_EPSILON
+#define FLT_EPSILON     1.192092896e-07F
+#endif // FLT_EPSILON
+
 
 #endif

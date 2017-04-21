@@ -8,6 +8,7 @@
 
 #include "KKEntityManager.hpp"
 #include "KKSceneManager.hpp"
+#include "KKTouchDispatcher.hpp"
 
 NS_KK_BEGIN
 
@@ -16,6 +17,134 @@ KKEntity::~KKEntity()
     for_each(mComponents.begin(), mComponents.end(), [ = ](KKComponent *comp){
         KK_SAFE_DELETE(comp);
     });
+}
+
+KKEntity *KKEntity::hitTest(kmMat4* preTransform, const KKPoint &point)
+{
+    if (!mHitTestEnabled)
+    {
+        return nullptr;
+    }
+    kmMat4 transform;
+    if (hasProperty("transform"))
+    {
+        //合并矩阵
+        kmMat4Multiply(&transform, preTransform, getProperty<kmMat4*>("transform"));
+    }
+    else
+    {
+        //矩阵赋值
+        kmMat4Assign(&transform, preTransform);
+    }
+    
+    //事件先判断zOrder >= 0 的subEntity, 然后再到自己, 最后还需判断zOrder < 0 的subEntity
+    bool hasProp = hasProperty("children");
+    if (hasProp)
+    {
+        auto children = getProperty<std::list<KKEntity *>>("children");
+        for (auto itr = children.rbegin(); itr != children.rend(); itr++)
+        {
+            if (*itr != nullptr)
+            {
+                if ((*itr)->hasProperty("zOrder") && (*itr)->getProperty<int>("zOrder") < 0)
+                {
+                    //zOrder < 0 说明子entity绘制在本身下文，故不必判断事件
+                    break;
+                }
+                KKEntity *res = (*itr)->hitTest(&transform, point);
+                if (res)
+                {
+                    return  res;
+                }
+            }
+        }
+    }
+    
+    //self event
+    if (mUserInteractionEnabled)
+    {
+        if (!onHitTest.empty())
+        {
+            bool ret;
+            onHitTest(&transform, point, &ret);
+            return ret ? this : nullptr;
+        }
+        else
+        {
+            auto size = getProperty<KKSize>("size");
+            if (hasProperty("size") && size !=KKSizeZero)
+            {
+                kmMat4 transform1;
+                kmMat4Inverse(&transform1, &transform);
+                float localX = (float)((double)transform1.mat[0]*point.x+(double)transform1.mat[4]*point.x+(double)transform1.mat[12]);
+                float localY = (float)((double)transform1.mat[1]*point.y+(double)transform1.mat[5]*point.y+(double)transform1.mat[13]);
+                if (localX>=0&&localY>=0&&localX<=size.width&&localY<=size.height)
+                {
+                    return this;
+                }
+                
+            }
+        }
+    }
+    
+    //还需判断zOrder < 0 的subEntity
+    if (hasProp)
+    {
+        auto children = getProperty<std::list<KKEntity *>>("children");
+        for (auto itr = children.rbegin(); itr != children.rend(); itr++)
+        {
+            if (*itr != nullptr)
+            {
+                if ((*itr)->hasProperty("zOrder") && (*itr)->getProperty<int>("zOrder") >= 0)
+                {
+                    //zOrder < 0 说明子entity绘制在本身下文，故不必判断事件
+                    continue;
+                }
+                KKEntity *res = (*itr)->hitTest(&transform, point);
+                if (res)
+                {
+                    return  res;
+                }
+            }
+        }
+    }
+    
+    return  nullptr;
+}
+
+const void KKEntity::dispatchTouchEvent(KKTouchEvent *event)
+{
+    if (mLastEvent == event->_id) //already dispatched
+    {
+        return;
+    }
+    mLastEvent = event->_id;
+    std::vector<KKPoint> location;
+    for (auto itr : event->touches)
+    {
+        location.push_back(itr.location);
+    }
+    auto entity = getEntityToDispatchEvent(location);
+    if (entity)
+    {
+        KKTouchDispatcher::sharedTouchDispatcher()->dispatchTouchEventToEntity(entity, event);
+    }
+}
+
+
+KKEntity *KKEntity::getEntityToDispatchEvent(std::vector<KKPoint> location)
+{
+    auto *sceneMgr = getEntityManager()->getSceneManager();
+    KKEntity *e = nullptr;
+    for (auto itr : location)
+    {
+        e = sceneMgr->hitTest(itr);
+        if (e) {
+            return e;
+        }
+    }
+    
+    return nullptr;
 }
 
 

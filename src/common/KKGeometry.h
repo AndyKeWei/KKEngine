@@ -21,7 +21,7 @@ public:
     float y = {0};
 public:
     KKPoint():x(0),y(0){}
-    KKPoint(int x, int y):x(x),y(y){}
+    KKPoint(float x, float y):x(x),y(y){}
     KKPoint operator+(const KKPoint &point)
     {
         return KKPoint(x+point.x, y+point.y);
@@ -117,11 +117,13 @@ public:
         return false;
     }
     
+    //向量x，y之间的点积
     float dot(const KKPoint &point) const
     {
         return x*point.x+y*point.y;
     }
     
+    //向量x，y之间的叉积
     float cross(const KKPoint &point) const
     {
         return x*point.x-y*point.y;
@@ -152,9 +154,34 @@ public:
         return KKPoint(x*point.x+y*point.y, x*point.y-y*point.x);
     }
     
-    float lenght() const
+    float length() const
     {
         return sqrtf(dot(*this));
+    }
+    
+    //标准化向量，返回一个方向和x相同但长度为1的向量
+    KKPoint normalize() const
+    {
+        return (*this)*(1.0f/length());
+    }
+    
+    static float distance(const KKPoint &v1, const KKPoint &v2)
+    {
+        return (v1-v2).length();
+    }
+    
+    static KKPoint midpoint(const KKPoint &v1, const KKPoint &v2)
+    {
+        return (v1+v2)/2;
+    }
+    
+    static float angle(const KKPoint& a, const KKPoint& b)
+    {
+        float angle = acosf(a.normalize().dot(b.normalize()));
+        if (fabs(angle) < FLT_EPSILON) {
+            return 0.f;
+        }
+        return angle;
     }
     
 };

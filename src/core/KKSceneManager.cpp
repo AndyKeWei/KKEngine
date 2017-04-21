@@ -44,6 +44,29 @@ void KKSceneManager::draw()
     }
 }
 
+KKEntity *KKSceneManager::hitTest(const KKPoint& p)
+{
+#if defined(TARGET_MACOS)
+    OpenThreads::ScopedReadLock lock(mMutex);
+#endif
+    for (auto itr = entities.rbegin();itr != entities.rend(); itr++)
+    {
+        kmMat4 t;
+        kmMat4Identity(&t);//创建单位矩阵
+        kmMat4Multiply(&t, &t, &mCameraMatrix);
+        if (*itr != nullptr)
+        {
+            KKEntity *res = (*itr)->hitTest(&t, p);
+            if (res)
+            {
+                return res;
+            }
+        }
+    }
+
+    return nullptr;
+}
+
 //记录当前设备运行程序时模版缓冲的位数
 GLint g_sStencilBits = -1;
 

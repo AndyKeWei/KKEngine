@@ -15,10 +15,15 @@
 #include "KKGL.h"
 #include "KKGLMatrixStack.h"
 #include <list>
+#include "KKEventType.h"
+#include "KKDelegate.h"
+#include "KKDirector.h"
 
 NS_KK_BEGIN
 
 NS_KK_BEGIN_GUI
+
+class KKView;
 
 typedef struct
 {
@@ -28,12 +33,18 @@ typedef struct
     float right;
 } KKEdgeInsets;
 
+typedef CDelegate2<KKView *, KKTouchEvent *> KKViewTouchHandler;
+
+#if defined(TARGET_MACOS)
+typedef CDelegate2<KKView *, KKMouseEvent *> KKViewMouseHandler;
+#endif
+
 class KKView {
     
 public:
-    KKView(KKView *view);
-    KKView(KKView *view, KKRect rect);
-    KKView(KKView *view, const KKView& copy);
+    KKView(KKView *parent = nullptr);
+    KKView(KKView *parent, KKRect rect);
+    KKView(KKView *parent, const KKView& copy);
     
     virtual ~KKView();
     
@@ -256,11 +267,38 @@ public:
     
     virtual void visit();
     
+    void addSubview(KKView *view);
+    
 protected:
     //add func for matrixstack
-    kmMat4 *getFriansform()
+    
+    //kmMat4
+    kmMat4 mNodeToWorldTransform; // 节点转世界坐标矩阵
+    kmMat4 mWorldToNodeTransform; // 世界转当前节点坐标矩阵
+    
+    bool mNeedsUpdateTransform {false};
+    kmMat4 mTransform; //当前矩阵
+    
+    void updateTransform()
     {
+        float winSizeHeight = mParent ? mParent->mBounds.size.height : KKDirector::getSingleton()->getWinSize().height;
+        KKPoint p = mFrame.origin;
+        p.x += mEdgeInsets.left;
+        p.y += mFrame.size.height - mEdgeInsets.bottom;
+        p.y = winSizeHeight - p.y;
         
+        //构建平移矩阵
+        kmMat4Translation(&mTransform, p.x, p.y, 0);
+    }
+    
+    kmMat4 *getTransform()
+    {
+        if (mNeedsUpdateTransform)
+        {
+            updateTransform();
+            mNeedsUpdateTransform = false;
+        }
+        return &mTransform;
     }
     
 protected:
@@ -283,14 +321,57 @@ protected:
     bool mClipToBounds {false};
     color4B mBackgroundColor;
     
-    int32_t mTag {0};
+    int32_t mTag = 0;
     
-    //kmMat4
-    kmMat4 mNodeToWorldTransform; // 节点转世界坐标矩阵
-    kmMat4 mWorldToNodeTransform; // 世界转当前节点坐标矩阵
+public:
     
-    bool mNeedsUpdateTransform {false};
-    kmMat4 mTransform; //当前矩阵
+    virtual KKView *hitTest(KKPoint p);
+    
+    virtual void onTouches (KKTouchEvent *touch)
+    {
+        if (mParent && mParent->userInteractionEnabled())
+        {
+            mParent->handleTouchEvent(touch);
+        }
+    }
+    KKViewTouchHandler touchHandler;
+    
+#if defined(TARGET_MACOS)
+    virtual void onMouseEvent(KKMouseEvent *mouseEvent)
+    {
+        if (mParent && mParent->userInteractionEnabled())
+        {
+            mParent->handleMouseEvent(mouseEvent);
+        }
+    }
+    KKViewMouseHandler mouseHandler;
+#endif
+    
+    void handleTouchEvent(KKTouchEvent *event)
+    {
+        if (touchHandler.empty())
+        {
+            onTouches(event);
+        }
+        else
+        {
+            touchHandler(this, event);
+        }
+    }
+    
+#if defined(TARGET_MACOS)
+    void handleMouseEvent(KKMouseEvent *mouseEvent)
+    {
+        if (mouseHandler.empty())
+        {
+            onMouseEvent(mouseEvent);
+        }
+        else
+        {
+            mouseHandler(this, mouseEvent);
+        }
+    }
+#endif
 };
 
 

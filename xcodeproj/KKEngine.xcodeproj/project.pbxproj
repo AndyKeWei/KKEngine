@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		500EAAE11E94E5EE0034B35A /* KKMouseDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50800A8E1E89384D00E9B01A /* KKMouseDispatcher.cpp */; };
 		50180D381B50CB1300388C47 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50180D371B50CB1300388C47 /* Images.xcassets */; };
 		50180D471B50CB1300388C47 /* KKEngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 50180D461B50CB1300388C47 /* KKEngineTests.m */; };
 		50265F101C45FEA600B952E0 /* KKEntityManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50265F0E1C45FEA600B952E0 /* KKEntityManager.cpp */; };
@@ -89,6 +90,8 @@
 		506591BF1CD0E93000B7FA12 /* KKGLConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591BD1CD0E93000B7FA12 /* KKGLConfiguration.cpp */; };
 		506591C01CD0E93000B7FA12 /* KKGLConfiguration.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 506591BD1CD0E93000B7FA12 /* KKGLConfiguration.cpp */; };
 		507BEA5F1C44EF9B0015F936 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50180D391B50CB1300388C47 /* MainMenu.xib */; };
+		50800A941E8A6B4600E9B01A /* KKTouchDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50800A921E8A6B4600E9B01A /* KKTouchDispatcher.cpp */; };
+		50800A951E8A6B4600E9B01A /* KKTouchDispatcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 50800A921E8A6B4600E9B01A /* KKTouchDispatcher.cpp */; };
 		5085641B1C93F7610023C7F1 /* KKClippingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508564191C93F7610023C7F1 /* KKClippingComponent.cpp */; };
 		5085641C1C93F7610023C7F1 /* KKClippingComponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 508564191C93F7610023C7F1 /* KKClippingComponent.cpp */; };
 		508F9A091CA13A4A00FCADFC /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 508F9A081CA13A4A00FCADFC /* libz.tbd */; };
@@ -284,6 +287,11 @@
 		506591BD1CD0E93000B7FA12 /* KKGLConfiguration.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKGLConfiguration.cpp; sourceTree = "<group>"; };
 		506591BE1CD0E93000B7FA12 /* KKGLConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KKGLConfiguration.h; sourceTree = "<group>"; };
 		507BEA611C452C720015F936 /* KKComponent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKComponent.h; sourceTree = "<group>"; };
+		50800A8E1E89384D00E9B01A /* KKMouseDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKMouseDispatcher.cpp; sourceTree = "<group>"; };
+		50800A8F1E89384D00E9B01A /* KKMouseDispatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKMouseDispatcher.hpp; sourceTree = "<group>"; };
+		50800A911E893C4900E9B01A /* KKEventType.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KKEventType.h; sourceTree = "<group>"; };
+		50800A921E8A6B4600E9B01A /* KKTouchDispatcher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKTouchDispatcher.cpp; sourceTree = "<group>"; };
+		50800A931E8A6B4600E9B01A /* KKTouchDispatcher.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKTouchDispatcher.hpp; sourceTree = "<group>"; };
 		508564191C93F7610023C7F1 /* KKClippingComponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KKClippingComponent.cpp; sourceTree = "<group>"; };
 		5085641A1C93F7610023C7F1 /* KKClippingComponent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = KKClippingComponent.hpp; sourceTree = "<group>"; };
 		508F9A081CA13A4A00FCADFC /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -691,6 +699,7 @@
 		505B918A1C3E784700B72AD7 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				50800A8D1E89380C00E9B01A /* eventdispatcher */,
 				50C69EFD1C4B937700A299BC /* components */,
 				5029BE4D1C3E7A8000FD0847 /* KKTimer.cpp */,
 				5029BE4E1C3E7A8000FD0847 /* KKTimer.h */,
@@ -703,6 +712,18 @@
 				505D66BE1C969C89009B30FC /* KKResourceManager.hpp */,
 			);
 			path = core;
+			sourceTree = "<group>";
+		};
+		50800A8D1E89380C00E9B01A /* eventdispatcher */ = {
+			isa = PBXGroup;
+			children = (
+				50800A8E1E89384D00E9B01A /* KKMouseDispatcher.cpp */,
+				50800A8F1E89384D00E9B01A /* KKMouseDispatcher.hpp */,
+				50800A911E893C4900E9B01A /* KKEventType.h */,
+				50800A921E8A6B4600E9B01A /* KKTouchDispatcher.cpp */,
+				50800A931E8A6B4600E9B01A /* KKTouchDispatcher.hpp */,
+			);
+			path = eventdispatcher;
 			sourceTree = "<group>";
 		};
 		509C86EB1CE9B80A002E76B2 /* gui */ = {
@@ -1037,6 +1058,7 @@
 				50F05DDB1B5A11B7007DA5F7 /* Version.cpp in Sources */,
 				5037CEA41CD0B45800B27B8B /* KKTexture.cpp in Sources */,
 				50F6AC351C44ADF400BDF95C /* KKGLView.mm in Sources */,
+				50800A941E8A6B4600E9B01A /* KKTouchDispatcher.cpp in Sources */,
 				506591B31CD0E80200B7FA12 /* HLImageETC1Codec.cpp in Sources */,
 				503E4D6F1C40FEAE0035361D /* mat4.c in Sources */,
 				505D66B71C965DA4009B30FC /* KKDrawingPrimitives.cpp in Sources */,
@@ -1062,6 +1084,7 @@
 				50265F211C47D78900B952E0 /* KKStringUtil.cpp in Sources */,
 				506591B91CD0E80200B7FA12 /* HLImagePVRCodec.cpp in Sources */,
 				503E4D791C40FEAE0035361D /* utility.c in Sources */,
+				500EAAE11E94E5EE0034B35A /* KKMouseDispatcher.cpp in Sources */,
 				503E4D0F1C3FC1880035361D /* KKGLMatrixStack.cpp in Sources */,
 				50265F191C466BDD00B952E0 /* KKSceneManager.cpp in Sources */,
 				50F6AC341C44ADDF00BDF95C /* KKDirectorCaller_mac.mm in Sources */,
@@ -1109,6 +1132,7 @@
 				509C86EF1CE9B82D002E76B2 /* KKView.cpp in Sources */,
 				506591B81CD0E80200B7FA12 /* HLImagePNGCodec.cpp in Sources */,
 				505D66CA1C9933EF009B30FC /* KKResourceManager_ios.mm in Sources */,
+				50800A951E8A6B4600E9B01A /* KKTouchDispatcher.cpp in Sources */,
 				506591B41CD0E80200B7FA12 /* HLImageETC1Codec.cpp in Sources */,
 				505D66B81C965DA4009B30FC /* KKDrawingPrimitives.cpp in Sources */,
 				503E4D7C1C40FEAE0035361D /* vec2.c in Sources */,

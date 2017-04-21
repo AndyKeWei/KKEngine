@@ -55,7 +55,7 @@ public:
     
     ~KKSceneManager();
     
-    KKEntityManager *getEntityManager() const
+    KKEntityManager *getEntityManager() 
     {
         return mEntityMgr;
     }
@@ -75,6 +75,8 @@ public:
     {
         return &mCameraMatrix;
     }
+    
+    KKEntity *hitTest(const KKPoint&);
 public:
     std::list<KKEntity *> entities;
     
